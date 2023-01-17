@@ -1,0 +1,45 @@
+h1 {
+  color: aqua;
+}
+
+.navbar {
+  background-color: lavenderblush;
+}
+
+.navbar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+}
+
+.navbar__button {
+  background-color: transparent;
+}
+
+@media (min-width: 600px) {
+  .navbar__button {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .navbar__collapse {
+    display: none;
+  }
+}
+.navbar__collapse > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar__collapse--show {
+  display: block;
+  width: 100%;
+}
+
+.navbar__collapse--show > ul {
+  flex-direction: column;
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */
