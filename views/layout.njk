@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.scss">
     <title>{{ title }}</title>
 </head>
 <body>
-    <nav class="primary-nav">
-        <ul role="list" class="nav-list flex-group">
-            <li role="listitem"><a href="/blog/">BLOG</a></li>
-            <li role="listitem"><a href="/about/">ABOUT</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="navbar__inner container">
+            <a href="/" class="logo">Super</a>
+            <button class="navbar__button" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M3 18v-2h18v2Zm0-5v-2h18v2Zm0-5V6h18v2Z"/></svg>
+            </button>
+            <div class="navbar__collapse">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <img src="/public/bat.png" alt="batman">
 
     {% block  content %}
     {% endblock %}
+    <script src="/public/menu.js"></script>
 
 </body>
 </html>
